@@ -1,0 +1,15 @@
+version: "3.3"
+services:
+  jdupes:
+    build: .
+    image: bnowakow/docker-jdupes-gui
+    volumes:
+        - /mnt/MargokPool/archive/TimeMachine:/mnt/rw/TimeMachine:rw
+        - /mnt/MargokPool/archive/Pictures:/mnt/ro/Pictures:ro
+    environment:
+        UID: 1000
+        GUID: 1000
+        UMASK: 000
+    ports:
+        - "8080:8080"
+    container_name: jdupes
