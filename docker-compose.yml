@@ -5,7 +5,15 @@ services:
     image: bnowakow/docker-jdupes-gui
     volumes:
         - /mnt/MargokPool/archive/TimeMachine:/mnt/rw/TimeMachine:rw
-        - /mnt/MargokPool/archive/Pictures:/mnt/ro/Pictures:ro
+        # - /mnt/MargokPool/archive/Pictures:/mnt/ro/Pictures:ro
+        # - /mnt/MargokPool/archive/Movies:/mnt/ro/Movies:ro 
+        - /mnt/MargokPool/archive/\@Recycle:/mnt/ro/Recycle:ro
+        - /mnt/MargokPool/archive/Documents:/mnt/ro/Documents:ro
+        - /mnt/MargokPool/archive/Hackintosh:/mnt/ro/Hackintosh:ro
+        - /mnt/MargokPool/archive/Hexxer\ iTunes\ backup:/mnt/ro/Hexxer-iTunes-backup:ro
+        - /mnt/MargokPool/archive/Install:/mnt/ro/Install:ro
+        - /mnt/MargokPool/archive/TO\ SORT:/mnt/ro/TO-SORT:ro
+        - /mnt/MargokPool/archive/Zrzuty\ ekranu:/mnt/ro/Zrzuty-ekranu:ro
     environment:
         UID: 1000
         GUID: 1000
