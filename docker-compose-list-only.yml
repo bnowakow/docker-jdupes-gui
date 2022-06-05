@@ -1,0 +1,4 @@
+version: "3.3"
+services:
+  jdupes:
+    entrypoint: /opt/scripts/jdupes-rw-ro-list-only.sh

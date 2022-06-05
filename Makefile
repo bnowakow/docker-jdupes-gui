@@ -1,19 +1,13 @@
 # https://unix.stackexchange.com/a/471113
+# :%s/^[ ]\+/\t/g
 
 start:
-	docker-compose up -d 
-	docker-compose logs -f &
+	docker-compose up
+	docker-compose down
 
-stop:
-	docker-compose stop
-
-restart:
-	docker-compose restart
-	docker-compose logs -f &
-
-logs:
-	docker-compose logs -f
-
+list:
+	docker-compose -f docker-compose.yml -f docker-compose-list-only.yml up
+	docker-compose down
 console:
 	docker exec -it jdupes bash
 
